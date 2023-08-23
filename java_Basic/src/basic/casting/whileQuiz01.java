@@ -2,7 +2,7 @@ package basic.casting;
 
 import java.util.Scanner;
 
-public class whileQiuz01 {
+public class whileQuiz01 {
 
 	public static void main(String[] args) {
 
