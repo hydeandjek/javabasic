@@ -22,12 +22,13 @@ public class WhileQuiz02 {
 		System.out.println("정수를 2개 입력하십시오. (ex: 2 3): ");
 		int a = sc.nextInt();
 		int b = sc.nextInt();
+		int n = a;
 		int total = 0;
 		while(a<=b) {
 			total +=a;
 			a++;
 		}
-		System.out.printf("%d부터 %d까지의 누적합계 : " + total,a,b);
+		System.out.printf("%d부터 %d까지의 누적합계 : " + total,n,b);
 	}
 
 }
