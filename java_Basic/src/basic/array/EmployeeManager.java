@@ -30,7 +30,18 @@ public class EmployeeManager {
                 //사원 정보 4가지를 입력받아 각 배열에 저장하는 코드를 작성.
                 //사번은 중복되면 안됩니다.
                 //(무한루프를 구현해서 사번 중복이 발생하면 다시 입력받기.)
+            	for(int i=0; i<userNums.length;i++) {
+            		System.out.println("사원번호를 입력하세요. : ");
+            		String num= sc.next();
+            		userNums[i] = num;
+            	}
             	
+            	System.out.println("사원 이름을 입력하세요. : ");
+            	String name = sc.next();
+            	System.out.println("사원 나이를 입력하세요. : ");
+            	int age = sc.nextInt();
+            	System.out.println("사원 부서를 입력하세요. : ");
+            	String dpt = sc.next();
             	
             	
             }else if(menu ==2) {
@@ -68,7 +79,7 @@ public class EmployeeManager {
             	System.out.println("메뉴를 잘못 입력하셨습니다.");
             }
 		}
-
+		sc.close();
 	}
 
 }
