@@ -16,7 +16,7 @@ public class IfQuiz02 {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("정수를 하나 입력하십시오 : ");
 		int X = sc.nextInt();
-		if(X == 0) {
+		if(X == 0) {// if (X %7 == 0 && X!=0) 이런 방법도 있다
 			System.out.println("0입니다.");
 		}else if(X%7 == 0) {
 			System.out.println("7의 배수입니다.");

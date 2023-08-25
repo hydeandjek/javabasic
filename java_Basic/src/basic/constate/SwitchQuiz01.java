@@ -16,27 +16,36 @@ public class SwitchQuiz01 {
 		Scanner sc= new Scanner(System.in);
 		System.out.println("정수를 하나 입력하십시오. : ");
 		int num1 = sc.nextInt();
-		System.out.println("연산자를 입력하십시오. (ex :* + -): ");
+		System.out.println("연산자를 입력하십시오. (ex :* + - / ): ");
 		String opt = sc.next();
 		System.out.println("정수를 하나 더 입력하십시오 : ");
 		int num2 = sc.nextInt();
 		int result = 0;
+		boolean flag = false;
 		switch(opt) {
 			case "*" :
-				result +=	num1 * num2;
-				System.out.println(result);
+				result =	num1 * num2;
 				break;
 			case "+" : 
-				result += num1+num2;
-				System.out.println(result);
+				result = num1+num2;
 				break;
 			case "-" : 
-				result += num1-num2;
-				System.out.println(result);
+				result = num1-num2;
+				break;
+			case "/" : 
+				if(num2 == 0) {
+					System.out.println(num2+"가 0이므로 연산할 수 없습니다.");
+					flag = true;
+					break;
+				}
+				result = num1/num2;
 				break;
 			default :
 				System.out.println("연산자를 다시 입력하십시오.");
 
+		}
+		if(!flag) {
+		System.out.println(result);
 		}
 		sc.close();
 	}

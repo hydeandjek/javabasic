@@ -22,6 +22,19 @@ public class WhileQuiz02 {
 		System.out.println("정수를 2개 입력하십시오. (ex: 2 3): ");
 		int a = sc.nextInt();
 		int b = sc.nextInt();
+		/*int start = (a>b? b:a);
+		 * int end = (b>a ? a:b);
+		 * int total = 0;
+		 * while (start <= end){
+		 * total += start;
+		 * start++;
+		 * }
+		 */
+		if(a>b) {
+			int temp = a;
+			a = b;
+			b = temp;
+		}
 		int n = a;
 		int total = 0;
 		while(a<=b) {

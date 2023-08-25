@@ -24,15 +24,16 @@ public class BreakQuiz01 {
 		while(true) {
 			int rn1 = (int)((Math.random()*100)+1);
 			int rn2 = (int)((Math.random()*100)+1);
-			int num = (int)(Math.random()*2);
+//			int num = (int)(Math.random()*2);
 			int correct;//정답
-			if(num==0) {
-				System.out.printf("%d + %d = ???\n",rn1,rn2);
-				correct=rn1+rn2;
-			}else {
-				System.out.printf("%d - %d = ???\n",rn1,rn2);
-				correct=rn1-rn2;
-			}
+//			if(num==0) {
+//				System.out.printf("%d + %d = ???\n",rn1,rn2);
+//				correct=rn1+rn2;
+//			}else {
+//				System.out.printf("%d - %d = ???\n",rn1,rn2);
+//				correct=rn1-rn2;
+//			}
+			System.out.printf("%d + %d = ???\n",rn1,rn2);
 			System.out.printf("> ");
 			
 			int answer = sc.nextInt();
@@ -40,6 +41,7 @@ public class BreakQuiz01 {
 			if (answer == rn1+rn2) {
 				System.out.println("정답입니다.");
 				cCount++;
+				break;
 			}else if(answer==0) {
 				System.out.println("종료합니다.");
 				break;
@@ -48,7 +50,7 @@ public class BreakQuiz01 {
 				iCount++;
 			}
 			System.out.println("-----------------------");
-			System.out.printf("정답 횟수 : %d , 오답횟수 :%d",cCount,iCount);
+			System.out.println("정답 횟수 : "+cCount+ ", 오답횟수 : "+iCount);
 			sc.close();
 		}
 		
