@@ -1,0 +1,24 @@
+package oop.inherit.bad;
+
+public class Warrior {
+	String name;
+	int level;
+	int atk;
+	int hp;
+	int rage;
+	
+	void characterinfo() {
+		System.out.println("*** 캐릭터의 정보 ***");
+		System.out.println("아이디 : "+ name);
+		System.out.println("레벨 : "+ level);
+		System.out.println("공격력 : "+ atk);
+		System.out.println("채력  : "+hp);
+		System.out.println("분노  : "+rage);
+	}
+	
+
+	public static void main(String[] args) {
+
+	}
+
+}

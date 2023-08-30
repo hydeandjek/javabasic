@@ -55,7 +55,7 @@ public class EmployeeManager {
             	
             	System.out.println("사원 나이를 입력하세요. : ");
             	ages[count] = sc.nextInt();
-            	System.out.println("사원 부서를 입력하세요. : ");
+            	System.out.println("사원 부서를 입력하세요. : ")	;
             	departments[count] = sc.next();
             	System.out.println(names[count]+"님의 정보가 정상 등록되었습니다.");
             	count++;//다음사람은 다음 인덱스에 저장하기 위해 미리 조치
