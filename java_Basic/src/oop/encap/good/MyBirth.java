@@ -1,5 +1,7 @@
 package oop.encap.good;
 
+import java.time.LocalDate;
+
 public class MyBirth {
 
 	/*
@@ -76,7 +78,14 @@ public class MyBirth {
 			System.out.println("날짜를 잘못 입력하셨습니다.");
 			return;
 		} else {
-			isValisateMonth(day);
+			if(this.month == 0) {
+				System.out.println("일자를 입력하기 위해서는 월을 입력하셔야 합니다.");
+				return;
+			}
+			if(!isValisateMonth(day)) {
+				System.out.println("월에 따른 일자가 올바르지 않습니다.");
+				return;
+			}
 			this.day=day;
 		}
 	}
@@ -86,17 +95,25 @@ public class MyBirth {
 	public int getDay() {
 		return this.day;
 	}
-	private void isValisateMonth(int day) {
+	private boolean isValisateMonth(int day) {
 		//각월에 적합한 일자가 세팅이 되어있는지를 판별하는 메서드
 		switch(month) {
 		
-		case 2: case 4: case 6: case 9: case 11:
-			if(day==31) {
-				System.out.println("해당 월은 31일이 없습니다.");
-				break;
+		case 2: 
+			if(day>28) {
+				System.out.println("해당 월은 28일까지 있습니다.");
+				return false;
 			}
+			
+		case 4: case 6: case 9: case 11:
+			if(day>30) {
+				System.out.println("해당 월은 31일이 없습니다.");
+				return false;
+			}
+		default:
+			return true;
 		}
-		return;
+		
 	}
 	public void birthInfo() {
 		//year, month, day 셋중 단 하나라도 제대로 값이 세팅되지 않았다면
