@@ -45,7 +45,17 @@ public class MainClass {
 		
 		System.out.println("---------------------------------------------");
 
-		Car c =kim.buyCar("포르쉐");
+		Tesla myTesla =(Tesla)kim.buyCar("테슬라");
+//		c.run();
+//		Tesla myTesla = (Tesla)c;
+		myTesla.activeAutopilot();
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }

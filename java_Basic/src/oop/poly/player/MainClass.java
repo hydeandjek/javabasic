@@ -34,5 +34,9 @@ public class MainClass {
 		Player [] terget = {w1,w2,m2,h1,h2};
 		m1.blizzard(terget);
 		
+		w1.rush(w1);
+		w1.rush(m1);
+		w1.rush(h1);
+		
 	}
 }
