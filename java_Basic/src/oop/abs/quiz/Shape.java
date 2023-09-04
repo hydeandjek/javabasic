@@ -14,13 +14,16 @@ public abstract class Shape {
 	    */
 	private String name;
 	
-	Shape(String sName){
-		name = sName;
+	Shape(String name){
+		this.name = name;
 	}
 	
 	public abstract double getArea(); 
 	
 	public String getName() {
 		return name;
+	}
+	private void setName(String name) {
+		this.name = name;
 	}
 }

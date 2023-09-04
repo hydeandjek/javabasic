@@ -17,11 +17,114 @@ public class Score {
 	int math;
 	int korean;
 	int english;
-	int sum;
+	int total;
 	double avg;
 	
-	void scoreInfo() {
-		System.out.printf(this.name+"의 점수는 국어 : "+korean+", 영어 : "+english+", 수학 : "+math+"총점 : "+sum+", 평균 : "+avg+"입니다.");
+	public Score(){}
+	
+	
+	
+	
+	public Score(String name, int math, int korean, int english) {
+		super();
+		this.name = name;
+		this.math = math;
+		this.korean = korean;
+		this.english = english;
+		this.total = korean+english+math;
+		this.avg = this.total/3.0;
+	}
+	
+
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+
+	public int getMath() {
+		return math;
+	}
+
+
+
+
+	public void setMath(int math) {
+		this.math = math;
+	}
+
+
+
+
+	public int getKorean() {
+		return korean;
+	}
+
+
+
+
+	public void setKorean(int korean) {
+		this.korean = korean;
+	}
+
+
+
+
+	public int getEnglish() {
+		return english;
+	}
+
+
+
+
+	public void setEnglish(int english) {
+		this.english = english;
+	}
+
+
+
+
+	public int getTotal() {
+		return total;
+	}
+
+
+
+
+	public void setTotal(int total) {
+		this.total = total;
+	}
+
+
+
+
+	public double getAvg() {
+		return avg;
+	}
+
+
+
+
+	public void setAvg(double avg) {
+		this.avg = avg;
+	}
+
+
+
+
+	public void scoreInfo() {
+		System.out.printf("이름 : %s 국어 : %d점 영어 : %d점  수학 : %d점\n총점 : %d점 평균 : %.2f\n",name,korean,english,math,total,avg);
 	}
 	
 	

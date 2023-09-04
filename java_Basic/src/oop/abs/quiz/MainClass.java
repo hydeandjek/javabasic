@@ -19,10 +19,11 @@ public class MainClass {
 		         */
 		Shape s = new Circle("반지름이 4인 원",4);
 		
-		System.out.println(s.getArea());
+		System.out.printf("%s의 넓이 : %.1f\n",s.getName(),s.getArea());
+		System.out.println("-----------------------------------------");
 		
 		Shape r = new Rect("변의길이가 5인 정사각형",5);
-		System.out.println(r.getArea());
+		System.out.println(r.getName()+"의 넓이는 "+r.getArea());
 	}
 
 }

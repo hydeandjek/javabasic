@@ -1,6 +1,5 @@
 package oop.obj_arr;
 
-import java.util.Arrays;
 
 public class MainClass {
 	
