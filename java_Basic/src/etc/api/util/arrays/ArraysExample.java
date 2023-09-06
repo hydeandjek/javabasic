@@ -25,7 +25,7 @@ public class ArraysExample {
 		//배열의 정렬
 		Integer[] nums = {42,11,36,88,34,100};
 		Arrays.sort(nums);
-		System.out.println(Arrays.toString(nums));
+		System.out.println(Arrays.toString(nums));	
 		
 		//내림차 정렬 (Integer[]를 지원)
 		Arrays.sort(nums,Collections.reverseOrder());
